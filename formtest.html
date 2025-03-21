@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formtest</title>
+  </head>
+  <body>
+    <style>
+      body section div input[type="submit"] {
+        display: block;
+        background-color: #12815a;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      body section div [type="reset"] {
+        display: block;
+        background-color: #ac2828;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+
+      textarea {
+        width: 97%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        margin: 5px;
+      }
+
+      form {
+        width: 300px;
+        background-color: #eee;
+        margin: 30px;
+        background-image: linear-gradient(rgb(132, 121, 236), rgb(255, 72, 72));
+      }
+      label {
+        width: 200px;
+        display: inline-block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 2px 0 0 10px;
+      }
+      input {
+        display: inline-block;
+        padding: 3px 10px;
+      }
+      body section div form {
+        justify-content: center;
+      }
+      fieldset {
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        margin: 5px;
+      }
+      legend {
+        background-image: linear-gradient(
+          rgb(132, 121, 236),
+          rgb(236, 221, 221)
+        );
+      }
+    </style>
+    <section>
+      <div>
+        <form method="post" action="">
+          <!-- fieldset er til at grupere en række forms f.eks. så er det nemmere at style det efterfølgende -->
+          <fieldset>
+            <!-- legend er til at give et fieldset en overordnet overskrift -->
+            <legend>Personoplysninger</legend>
+            <!-- label er til at give et input en definition -->
+            <label for="navn">Navn:</label>
+            <!-- input er et segment hvor man kan skrive en værdi i, alt efter hvilken slags input det er -->
+            <input name="navn" navn type="text" placeholder="Dit navn" />
+
+            <label for="efternavn">Efternavn:</label>
+            <input
+              name="efternavn"
+              efternavn
+              type="text"
+              placeholder="Dit efternavn"
+            />
+
+            <label for="Email">Email:</label>
+            <input name="Email" adresse type="text" placeholder="Din email" />
+          </fieldset>
+
+          <input type="hidden" name="recipient" value="jakobbro7@gmail.com" />
+          <input type="hidden" name="redirect" value="https://firma.dk" />
+
+          <div>
+            <label for="kommentar">kommentar</label>
+            <textarea rows="5" cols="25" name="kommentar"></textarea>
+          </div>
+          <div>
+            <input type="reset" value="reset" />
+            <label for="submit"></label>
+            <input type="submit" value="submit" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
